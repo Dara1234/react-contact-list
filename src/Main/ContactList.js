@@ -1,9 +1,11 @@
 import React from "react";
-import { Table, Space, Button, Divider } from "antd";
+import { Table, Space, Button, Divider, Switch } from "antd";
 import Context from "./Context";
+import moment from "moment";
+
 
 const ContactList = ({ onAddNewClick }) => {
-  const { contacts } = React.useContext(Context);
+  const {contacts} = React.useContext(Context);
 
   const columns = [
     {
@@ -15,6 +17,21 @@ const ContactList = ({ onAddNewClick }) => {
       title: "Phone Number",
       dataIndex: "phone",
       key: "phone",
+    },
+    {
+      title: "Date of Birth",
+      dataIndex: "birthday",
+      key: "birthday",
+    },
+    {
+      title: "Gender",
+      dataIndex: "gender",
+      key: "gender",
+    },
+    {
+      title: "Availability",
+      dataIndex: "availability",
+      key: "availability",
     },
   ];
 

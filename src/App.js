@@ -8,6 +8,7 @@ function App() {
   const [contacts, setContacts] = React.useState([]);
 
   const addNewContact = (contact) => {
+    console.log(contact)
     setContacts(contacts.concat(contact));
   };
 
